@@ -2942,6 +2942,11 @@ void SpellMgr::LoadDbcDataCorrections()
             case 36350: //They Must Burn Bomb Aura (self)
                 spellInfo->EffectTriggerSpell[0] = 36325; // They Must Burn Bomb Drop (DND)
                 break;
+			case 49224: // Magic Suppression Rank 1
+			case 49610: // Magic Suppression Rank 2
+			case 49611: // Magic Suppression Rank 3
+				spellInfo->procCharges = 0;
+				break;
             case 49838: // Stop Time
                 spellInfo->AttributesEx3 |= SPELL_ATTR3_NO_INITIAL_AGGRO;
                 break;
