@@ -2955,6 +2955,10 @@ void SpellMgr::LoadDbcDataCorrections()
             case 59372: // Energize Cores
                 spellInfo->EffectImplicitTargetA[0] = TARGET_UNIT_SRC_AREA_ENEMY;
                 break;
+				        //Slice and Dice fix
+			case 5171: case 6774: // Slice and Dice
+				spellInfo->AttributesEx3 |= SPELL_ATTR3_NO_INITIAL_AGGRO;
+					break;
             case 8494: // Mana Shield (rank 2)
                 // because of bug in dbc
                 spellInfo->procChance = 0;
