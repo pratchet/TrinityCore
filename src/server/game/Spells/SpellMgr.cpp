@@ -3342,6 +3342,9 @@ void SpellMgr::LoadDbcDataCorrections()
                 spellInfo->EffectImplicitTargetB[0] = TARGET_UNIT_TARGET_ANY;
                 spellInfo->Effect[1] = 0;
                 break;
+            case 45529: // Blood Tap
+                spellInfo->EffectMiscValue[0] = 0;
+                break;
             default:
                 break;
         }
